@@ -13,13 +13,14 @@ public class FileLoad {
 
 
     public static String uploadAdminPic(MultipartFile file) {
-        String picName = UUID.randomUUID().toString();
+        String picName = UUID.randomUUID().toString().replaceAll("-","");
+
         //获取上传文件得元素得名称
         String fileName = file.getOriginalFilename();
         String substring = fileName.substring(fileName.lastIndexOf("."));
         //上传文件
         try {
-            file.transferTo(new File(FileConfig.PROJECT_PATH + "/src/main/webapp/static/images/admin/" + picName + substring));
+            file.transferTo(new File(FileConfig.IMAGE_PATH + picName + substring));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -29,13 +30,14 @@ public class FileLoad {
     }
 
     public static String uploadUserPic(MultipartFile file) {
-        String picName = UUID.randomUUID().toString();
+        String picName = UUID.randomUUID().toString().replaceAll("-","");
+
         //获取上传文件得元素得名称
         String fileName = file.getOriginalFilename();
         String substring = fileName.substring(fileName.lastIndexOf("."));
         //上传文件
         try {
-            file.transferTo(new File(FileConfig.PROJECT_PATH + "/src/main/webapp/static/images/user/" + picName + substring));
+            file.transferTo(new File(FileConfig.IMAGE_PATH + picName + substring));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -45,13 +47,13 @@ public class FileLoad {
     }
 
     public static String uploadPetPic(MultipartFile file) {
-        String picName = UUID.randomUUID().toString();
+        String picName = UUID.randomUUID().toString().replaceAll("-","");
         //获取上传文件得元素得名称
         String fileName = file.getOriginalFilename();
         String substring = fileName.substring(fileName.lastIndexOf("."));
         //上传文件
         try {
-            file.transferTo(new File(FileConfig.PROJECT_PATH + "/src/main/webapp/static/images/animal/" + picName + substring));
+            file.transferTo(new File(FileConfig.IMAGE_PATH + picName + substring));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -8,4 +8,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class FileConfig {
     public static final String PROJECT_PATH = "E:\\IDEA_Project\\YYR\\PetShop";
+
+    public static final String IMAGE_PATH = PROJECT_PATH + "\\Images\\";
 }
