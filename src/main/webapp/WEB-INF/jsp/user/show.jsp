@@ -31,7 +31,7 @@
                 <ul class="items">
                     <c:forEach items="${pics}" var="pic">
                         <li>
-                            <a href=""><img class="my-img" src="/static/images/animal/${pic}"></a>
+                            <a href=""><img class="my-img" src="${path}/static/images/animal/${pic}"></a>
                         </li>
                     </c:forEach>
                 </ul>
@@ -248,7 +248,7 @@
         var comments = result.extend.comment;
         console.log(result.extend.comment);
         $.each(comments, function (index, comment) {
-            var headTd = $("<header></header>").append($("<img>").attr("src", "/static/images/user/" + (comment.user.pic)));
+            var headTd = $("<header></header>").append($("<img>").attr("src", "${path}/static/images/user/" + (comment.user.pic)));
             var head = $("<div></div>").addClass("comment-right");
             var userNameTd = $("<h3></h3>").append(comment.user.userName);
             var bodyTd = $("<div></div>").addClass("comment-content-header");
