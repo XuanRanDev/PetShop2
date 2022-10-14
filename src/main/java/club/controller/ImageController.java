@@ -15,7 +15,7 @@ import java.io.IOException;
  * Created by XuanRan on 2022/10/14
  */
 
-@WebServlet("/getClothesImg")
+@WebServlet("/getImage")
 public class ImageController extends HttpServlet {
 
     @Override
