@@ -31,7 +31,7 @@
                 <ul class="items">
                     <c:forEach items="${pics}" var="pic">
                         <li>
-                            <a href=""><img class="my-img" src="${path}/static/images/animal/${pic}"></a>
+                            <a href=""><img class="my-img" src="${path}/getImage?name=${pic}"></a>
                         </li>
                     </c:forEach>
                 </ul>

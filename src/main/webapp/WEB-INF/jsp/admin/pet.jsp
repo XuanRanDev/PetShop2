@@ -443,7 +443,7 @@
             var petTypeTd = $("<td></td>").append(pet.petType);
             var sexTd = $("<td></td>").append(pet.sex);
             var birthdayTd = $("<td></td>").append(pet.birthday);
-            var picTd = $("<td></td>").append($("<img/>").addClass("mySize").attr("src", "${path}/static/images/animal/" + spilt(pet.pic)));
+            var picTd = $("<td></td>").append($("<img/>").addClass("mySize").attr("src", "${path}/getImage?name=" + spilt(pet.pic)));
             var stateTd = null;
             if (pet.state == 0) {
                 stateTd = $("<td></td>").append("还未被申请购买");

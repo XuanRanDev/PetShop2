@@ -41,10 +41,10 @@
         </div>
 
         <div class="w3l-img-side">
-            <img src="<c:url value="/static/images/animal/cat.jpg"/>" alt=""/>
+            <img src="<c:url value="/getImage?name=cat.jpg"/>" alt=""/>
         </div>
         <div class="w3l-img-side w3l-img-side2">
-            <img src="<c:url value="/static/images/animal/dog.jpg"/>" alt=""/>
+            <img src="<c:url value="/getImage?name=dog.jpg"/>" alt=""/>
         </div>
     </div>
     <div class="row">
@@ -121,7 +121,7 @@
             var headTd=$("<div></div>").addClass("spinner");
             <%--src="<c:url value="/static/images/animal/dog.jpg"/>"--%>
             var imgTd=$("<div></div>").addClass("img").append($("<img/>").addClass("img-responsive")
-                .attr("src","<c:url value="/static/images/animal/"/>"+spilt(pet.pic)).attr("pet-id",pet.id));
+                .attr("src","<c:url value="/getImage?name="/>"+spilt(pet.pic)).attr("pet-id",pet.id));
             // imgTd.attr("pet-id",pet.id);
             /*$(".img-responsive").attr("pet-id",pet.id);*/
             divTd.append(headTd);
